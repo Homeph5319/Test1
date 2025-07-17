@@ -72,13 +72,13 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 16
+    .locals 7
 
     const/4 v4, 0x2
 
-    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
-move-result-object v14
-invoke-virtual {v14}, Ljava/util/concurrent/ThreadLocalRandom;->nextInt()I
+    new-instance v6, Ljava/util/Random;
+invoke-direct {v6}, Ljava/util/Random;-><init>()V
+invoke-virtual {v6}, Ljava/util/Random;->nextInt()I
 move-result v5
 
     const/4 v0, 0x1
