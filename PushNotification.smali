@@ -76,7 +76,10 @@
 
     const/4 v4, 0x2
 
-    const/4 v5, 0x7
+    invoke-static {}, Ljava/util/Random;->new()Ljava/util/Random;
+move-result-object v0
+invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+move-result v5
 
     const/4 v0, 0x1
 
@@ -6688,7 +6691,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-.locals 2
+    .locals 2
 
     if-eqz p2, :cond_0
 
@@ -6730,7 +6733,9 @@
     goto :goto_0
 
     :pswitch_1
-    const/4 v0, 0x1
+    sget-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jy:Z
+
+    if-eqz v0, :cond_1
 
     new-instance v0, Lcom/gameloft/android/GloftKLMF/PushNotification/o;
 
