@@ -1,4 +1,5 @@
 .class public Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
+.field private static notifyId:I
 .super Landroid/content/BroadcastReceiver;
 
 
@@ -72,14 +73,13 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 6
 
     const/4 v4, 0x2
 
-    new-instance v6, Ljava/util/Random;
-invoke-direct {v6}, Ljava/util/Random;-><init>()V
-invoke-virtual {v6}, Ljava/util/Random;->nextInt()I
-move-result v5
+    sget v5, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
+add-int/lit8 v5, v5, 0x1
+sput v5, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
 
     const/4 v0, 0x1
 
