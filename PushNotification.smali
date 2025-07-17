@@ -3248,11 +3248,6 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-
-    move-result-object v2
-
-    check-cast v2, Landroid/app/NotificationManager;
-
     invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
