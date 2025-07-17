@@ -6768,33 +6768,3 @@
         :pswitch_3
     .end packed-switch
 .end method
-.method public static showNotification(Landroid/content/Context;)V
-    .locals 4
-
-    const-string v0, "notification"
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    move-result-object v0
-    check-cast v0, Landroid/app/NotificationManager;
-
-    new-instance v1, Landroid/app/Notification$Builder;
-    invoke-direct {v1, p0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
-
-    const-string v2, "Title"
-    const-string v3, "This is a test notification"
-    invoke-virtual {v1, v2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-    invoke-virtual {v1, v3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    const v2, 0x1080093  # stat_notify_chat
-    invoke-virtual {v1, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
-
-    invoke-virtual {v1}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
-    move-result-object v2
-
-    sget v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
-    add-int/lit8 v3, v3, 0x1
-    sput v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
-
-    invoke-virtual {v0, v3, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
-
-    return-void
-.end method
