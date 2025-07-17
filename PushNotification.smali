@@ -490,9 +490,9 @@
 
     const/4 v2, 0x0
 
-#     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
@@ -1276,7 +1276,7 @@
 
     move-result v2
 
-#     invoke-interface {v10, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v10, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1294,9 +1294,9 @@
 
     const/4 v2, 0x0
 
-#     invoke-interface {v10, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v10, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v10}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v10}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :cond_6
     sget v1, Lcom/gameloft/android/GloftKLMF/PushNotification/d;->jb:I
@@ -1333,7 +1333,7 @@
 
     move-result-object v2
 
-#     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "creation_time"
 
@@ -1343,7 +1343,7 @@
 
     move-result-object v2
 
-#     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "schedule_time"
 
@@ -1355,7 +1355,7 @@
 
     move-result-object v2
 
-#     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p1, v8}, Lcom/gameloft/android/GloftKLMF/PushNotification/d;->a(Landroid/os/Bundle;I)Ljava/lang/String;
 
@@ -1462,7 +1462,7 @@
 
     const-string/jumbo v7, "pn_request_id"
 
-#     invoke-virtual {p1, v7, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v7, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v7, Landroid/os/Bundle;
 
@@ -1470,39 +1470,39 @@
 
     const-string/jumbo v8, "juid"
 
-#     invoke-virtual {v7, v8, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v8, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jlbl"
 
     move-object/from16 v0, p3
 
-#     invoke-virtual {v7, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jbdy"
 
-#     invoke-virtual {v7, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jdly"
 
-#     invoke-virtual {v7, v1, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v1, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jtkn"
 
-#     invoke-virtual {v7, v1, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v1, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jxtr"
 
-#     invoke-virtual {v7, v1, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v1, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jrqst"
 
-#     invoke-virtual {v7, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v7, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jrtry"
 
     const/4 v2, 0x3
 
-#     invoke-virtual {v7, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v7, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     sget-object v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
@@ -2358,7 +2358,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-#     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2554,7 +2554,7 @@
     :try_start_1
     const-string/jumbo v2, "jrtry"
 
-#     invoke-virtual {p3, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {p3, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     new-instance v1, Landroid/content/Intent;
 
@@ -2582,7 +2582,7 @@
 
     shl-long/2addr v4, v8
 
-#     invoke-virtual {p3, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {p3, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string/jumbo v3, "pn_rqstType"
 
@@ -2742,9 +2742,9 @@
 
     sget-object v2, Ljavax/microedition/midlet/d;->bBM:Ljava/lang/String;
 
-#     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 
@@ -2886,9 +2886,9 @@
 
     move-result-object v2
 
-#     invoke-interface {v2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 .end method
@@ -3248,6 +3248,11 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
+
+    move-result-object v2
+
+    check-cast v2, Landroid/app/NotificationManager;
+
     invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -3315,7 +3320,7 @@
 
     move-result-object v3
 
-#     invoke-interface {v2, v3, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string/jumbo v3, "PN_stackID_"
 
@@ -3331,10 +3336,10 @@
 
     rem-int/lit8 v4, v4, 0x20
 
-#     invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     :goto_8
-#     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     new-instance v2, Landroid/os/Bundle;
 
@@ -3360,7 +3365,7 @@
 
     move-result-object v4
 
-#     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->c(Landroid/os/Bundle;)Ljava/util/Hashtable;
 
@@ -3432,7 +3437,7 @@
 
     rem-int/lit8 v4, v5, 0x20
 
-#     invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_8
 
@@ -4094,9 +4099,9 @@
 
     const-string/jumbo v2, "UserID"
 
-#     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :cond_2
     return-void
@@ -4133,29 +4138,29 @@
 
     const-string/jumbo v1, "juid"
 
-#     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jusrpss"
 
-#     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jusrcred"
 
     sget-object v2, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jA:Ljava/lang/String;
 
-#     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jbckff"
 
     const-wide/16 v2, 0x4e20
 
-#     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string/jumbo v1, "jrtry"
 
     const/4 v2, 0x3
 
-#     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     sget-object v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
@@ -4350,13 +4355,13 @@
 
     const/4 v2, 0x3
 
-#     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v1, "jbckff"
 
     const-wide/16 v2, 0x4e20
 
-#     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     sget-object v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
@@ -4453,17 +4458,17 @@
 
     const-string/jumbo v3, "PN_regId"
 
-#     invoke-interface {v2, v3, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string/jumbo v3, "PN_appVersion"
 
-#     invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string/jumbo v0, "PN_regId_ExpirationTimeMs"
 
-#     invoke-interface {v2, v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :cond_0
     move-object v0, v1
@@ -5107,9 +5112,9 @@
 
     const/4 v2, 0x1
 
-#     invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -5164,14 +5169,14 @@
 
     const/4 v3, 0x0
 
-#     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-#     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :cond_1
     return-void
@@ -5391,9 +5396,9 @@
 
     const-string/jumbo v2, "PN_GroupId"
 
-#     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :cond_2
     return-void
@@ -6024,7 +6029,7 @@
 
     const-string/jumbo v5, "pn_online"
 
-#     invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     sget-object v4, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jv:Landroid/os/Bundle;
 
@@ -6037,7 +6042,7 @@
     move v0, v2
 
     :goto_2
-#     invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jv:Landroid/os/Bundle;
 
@@ -6048,7 +6053,7 @@
     if-eqz v5, :cond_6
 
     :goto_3
-#     invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string/jumbo v0, "pn_goto_multiplayer"
 
@@ -6256,11 +6261,11 @@
 
     const-string/jumbo v2, "jphid"
 
-#     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "jrtry"
 
-#     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     sget-object v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
@@ -6519,13 +6524,13 @@
 
     const-string/jumbo v1, "RandomUserID"
 
-#     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string/jumbo v1, "RandomUserToken"
 
-#     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-#     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jj:[Z
 
