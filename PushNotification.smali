@@ -77,9 +77,10 @@
 
     const/4 v4, 0x2
 
-    sget v5, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
-add-int/lit8 v5, v5, 0x1
-sput v5, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
+    sget v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
+add-int/lit8 v3, v3, 0x1
+sput v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->notifyId:I
+move v5, v3
 
     const/4 v0, 0x1
 
