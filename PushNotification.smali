@@ -76,9 +76,9 @@
 
     const/4 v4, 0x2
 
-    invoke-static {}, Ljava/util/Random;->new()Ljava/util/Random;
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 move-result-object v0
-invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+invoke-virtual {v0}, Ljava/util/concurrent/ThreadLocalRandom;->nextInt()I
 move-result v5
 
     const/4 v0, 0x1
