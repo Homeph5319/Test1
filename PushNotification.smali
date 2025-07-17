@@ -6688,7 +6688,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+.locals 2
 
     if-eqz p2, :cond_0
 
@@ -6730,9 +6730,7 @@
     goto :goto_0
 
     :pswitch_1
-    sget-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jy:Z
-
-    if-eqz v0, :cond_1
+    const/4 v0, 0x1
 
     new-instance v0, Lcom/gameloft/android/GloftKLMF/PushNotification/o;
 
