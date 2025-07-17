@@ -3248,7 +3248,7 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-        invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -6766,22 +6766,4 @@
         :pswitch_2
         :pswitch_3
     .end packed-switch
-.end method
-
-.method public static triggerNotification(Landroid/content/Context;ILandroid/app/Notification;)V
-    .registers 3
-    invoke-virtual {p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    move-result-object p0
-    check-cast p0, Landroid/app/NotificationManager;
-    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
-    return-void
-.end method
-
-.method public static triggerNotification(Landroid/content/Context;ILandroid/app/Notification;)V
-    .registers 3
-    invoke-virtual {p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    move-result-object p0
-    check-cast p0, Landroid/app/NotificationManager;
-    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
-    return-void
 .end method
