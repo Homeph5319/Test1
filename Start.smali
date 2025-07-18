@@ -1494,7 +1494,7 @@
 
     invoke-super {p0, p1}, Ljavax/microedition/midlet/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    # Clear GLPN.xml SharedPreferences
+    # Clear GLPN SharedPreferences safely
     const-string v0, "GLPN"
     const/4 v1, 0x0
     invoke-virtual {p0, v0, v1}, Lcom/gameloft/android/GloftKLMF/Start;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
