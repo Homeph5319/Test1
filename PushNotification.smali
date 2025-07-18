@@ -515,7 +515,6 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
     .locals 8
-    invoke-static {p0}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->showNotification(Landroid/content/Context;)V
 
     const/high16 v7, 0x10000000
 
