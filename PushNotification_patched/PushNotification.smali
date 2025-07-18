@@ -84,25 +84,31 @@
 
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ji:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ji:Z
 
     new-array v2, v4, [Z
 
     sput-object v2, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jj:[Z
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jk:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jk:Z
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jl:Ljava/lang/String;
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jn:Ljava/lang/String;
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jo:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jo:Z
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jp:Ljava/lang/String;
 
@@ -120,6 +126,7 @@
 
     sput-object v2, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jt:Ljava/lang/String;
 
+    const/4 v0, 0x0
     sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jy:Z
 
     const/16 v2, 0x14
@@ -251,6 +258,7 @@
     if-ge v2, v3, :cond_0
 
     :goto_0
+    const/4 v0, 0x0
     sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jB:Z
 
     new-array v0, v5, [Z
@@ -310,7 +318,8 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
@@ -333,7 +342,8 @@
     add-int/lit8 p0, p0, 0x65
 
     :goto_0
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     move v0, v1
 
@@ -359,7 +369,8 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
@@ -412,7 +423,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -425,7 +437,8 @@
 
     move-result v3
 
-    if-nez v3, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v3, "PN_LID_"
 
@@ -433,7 +446,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {v0}, Lcom/gameloft/android/GloftKLMF/PushNotification/d;->al(Ljava/lang/String;)V
     :try_end_0
@@ -528,7 +542,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "igpcode"
 
@@ -536,14 +551,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
     invoke-static {p2}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     :try_start_0
     const-string/jumbo v0, "igpcode"
@@ -552,13 +569,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Lcom/gameloft/android/wrapper/ah;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {p0}, Lcom/gameloft/android/wrapper/ah;->setContext(Landroid/content/Context;)V
 
@@ -771,7 +790,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -803,7 +823,8 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Lcom/gameloft/android/wrapper/ah;->tf()Ljava/lang/String;
 
@@ -817,7 +838,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -885,7 +907,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_6
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "launch"
 
@@ -893,7 +916,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_6
     new-instance v0, Landroid/content/Intent;
@@ -902,7 +926,8 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz p3, :cond_7
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "pn_data_bundle"
 
@@ -915,7 +940,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "pn_goto_multiplayer"
 
@@ -935,7 +961,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Landroid/content/Intent;
 
@@ -943,7 +970,8 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz p3, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "pn_data_bundle"
 
@@ -973,7 +1001,8 @@
 
     new-array v5, v4, [Ljava/lang/String;
 
-    if-eqz p1, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -994,7 +1023,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1008,7 +1038,8 @@
 
     move-result v8
 
-    if-eqz v8, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "body"
 
@@ -1027,7 +1058,8 @@
 
     move-result v8
 
-    if-eqz v8, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "username"
 
@@ -1044,13 +1076,15 @@
 
     move-result v8
 
-    if-nez v8, :cond_11
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    if-eqz v8, :cond_11
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1103,7 +1137,8 @@
     const/4 v1, 0x0
 
     :goto_2
-    if-eqz v1, :cond_e
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v2, 0x1
 
@@ -1117,7 +1152,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_10
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v4, "1"
 
@@ -1163,7 +1199,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1177,7 +1214,8 @@
 
     move-result v12
 
-    if-eqz v12, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "infopush"
 
@@ -1220,7 +1258,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "per_of_day"
 
@@ -1234,9 +1273,11 @@
     goto :goto_5
 
     :cond_5
-    if-eqz v5, :cond_6
+    # patched: always allow notification
+    goto :bypass_check
 
-    if-eqz v2, :cond_6
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1256,7 +1297,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_6
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1313,7 +1355,8 @@
 
     move-result v2
 
-    if-nez v2, :cond_7
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v2, "launch"
 
@@ -1321,7 +1364,8 @@
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    # patched: always allow notification
+    goto :bypass_check
 
     add-int/lit8 p5, p5, 0x65
 
@@ -1381,7 +1425,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    # patched: always allow notification
+    goto :bypass_check
 
     move/from16 v0, p5
 
@@ -1412,13 +1457,15 @@
 
     move-result v2
 
-    if-nez v2, :cond_c
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_b
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1434,7 +1481,8 @@
 
     move-result-object v1
 
-    if-eqz p4, :cond_a
+    # patched: always allow notification
+    goto :bypass_check
 
     sget v2, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jx:I
 
@@ -1608,7 +1656,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, ""
 
@@ -1625,7 +1674,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Landroid/support/v4/a/d;->e()Ljava/lang/String;
 
@@ -1766,7 +1816,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "US"
 
@@ -1791,7 +1842,8 @@
 
     move-result v6
 
-    if-eqz v6, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "en"
 
@@ -1894,7 +1946,8 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     move-object v0, v1
 
@@ -1905,7 +1958,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v0, 0x3ea
 
@@ -1964,7 +2018,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "e"
 
@@ -2012,7 +2067,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2125,7 +2181,8 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -2342,7 +2399,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v3}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -2455,11 +2513,13 @@
 
     sget-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ji:Z
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ji:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ji:Z
 
     const/4 v1, 0x0
 
@@ -2473,7 +2533,8 @@
     return-object v0
 
     :cond_0
-    if-eqz p1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "POST"
 
@@ -2535,7 +2596,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, -0x2
 
@@ -2655,7 +2717,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :try_start_3
     sget-object v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
@@ -2690,7 +2753,8 @@
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
@@ -2701,7 +2765,8 @@
     :cond_0
     sget-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jB:Z
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v0, 0x3e8
 
@@ -2722,7 +2787,8 @@
 
     invoke-static {p0}, Lcom/gameloft/android/GloftKLMF/PushNotification/p;->d(Landroid/content/Context;)V
 
-    sput-boolean v5, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -2757,11 +2823,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jq:Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;
 
@@ -2809,7 +2877,8 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -2829,7 +2898,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2920,7 +2990,8 @@
 
     move-result v7
 
-    if-nez v7, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     :try_start_0
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -2943,7 +3014,8 @@
 
     move-result v6
 
-    if-nez v6, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v6, "info"
 
@@ -2953,7 +3025,8 @@
 
     move-result v6
 
-    if-eqz v6, :cond_d
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_1
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -2974,7 +3047,8 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v2, 0x64
 
@@ -3006,7 +3080,8 @@
 
     move-result v3
 
-    if-nez v3, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v3, 0x1f
 
@@ -3084,7 +3159,8 @@
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v2, 0x65
 
@@ -3178,12 +3254,14 @@
     iput v4, v6, Lcom/gameloft/android/GloftKLMF/PushNotification/e;->je:I
 
     :cond_7
-    if-eqz v3, :cond_8
+    # patched: always allow notification
+    goto :bypass_check
 
     iput-object v3, v6, Lcom/gameloft/android/GloftKLMF/PushNotification/e;->jf:[Ljava/lang/String;
 
     :cond_8
-    if-eqz v2, :cond_9
+    # patched: always allow notification
+    goto :bypass_check
 
     const/high16 v3, 0x8000000
 
@@ -3202,7 +3280,8 @@
 
     move-result v2
 
-    if-nez v2, :cond_a
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v2, "launch"
 
@@ -3212,7 +3291,8 @@
 
     move-result v2
 
-    if-nez v2, :cond_a
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v2, "info"
 
@@ -3222,7 +3302,8 @@
 
     move-result v2
 
-    if-eqz v2, :cond_10
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_a
     const/high16 v2, 0x8000000
@@ -3262,7 +3343,8 @@
 
     move-result v3
 
-    if-nez v3, :cond_b
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v3, "info"
 
@@ -3272,7 +3354,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_11
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_b
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -3340,7 +3423,8 @@
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    if-eqz p5, :cond_c
+    # patched: always allow notification
+    goto :bypass_check
 
     move-object/from16 v0, p5
 
@@ -3469,7 +3553,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Lcom/gameloft/android/wrapper/ah;->getDeviceId()Ljava/lang/String;
 
@@ -3479,7 +3564,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
@@ -3487,7 +3573,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -3495,7 +3582,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3559,13 +3647,15 @@
 .method public static ap(Ljava/lang/String;)Z
     .locals 1
 
-    if-eqz p0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
     const/4 v0, 0x1
@@ -3646,7 +3736,8 @@
 
     move-result v3
 
-    if-nez v3, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     add-int/lit8 v1, v1, 0x1
 
@@ -3689,7 +3780,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "pt"
 
@@ -3700,7 +3792,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "le"
 
@@ -3733,7 +3826,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     move v0, v1
 
@@ -3813,7 +3907,8 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3857,6 +3952,7 @@
 
     const/4 v0, 0x1
 
+    const/4 v0, 0x0
     sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ji:Z
 
     const/4 v0, 0x1
@@ -3891,7 +3987,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ju:Ljava/util/ArrayList;
 
@@ -3987,7 +4084,8 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -4007,7 +4105,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4019,12 +4118,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x1
 
     :goto_1
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -4041,7 +4142,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4178,7 +4280,8 @@
 
     invoke-direct {v2}, Ljava/util/Hashtable;-><init>()V
 
-    if-eqz p2, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -4194,7 +4297,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4206,13 +4310,15 @@
 
     move-result v4
 
-    if-nez v4, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
-    if-eqz v4, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4220,7 +4326,8 @@
 
     instance-of v4, v4, Ljava/lang/String;
 
-    if-eqz v4, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4288,7 +4395,8 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4299,7 +4407,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4394,7 +4503,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, ""
 
@@ -4403,7 +4513,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
@@ -4421,7 +4532,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
@@ -4473,7 +4585,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_6
+    # patched: always allow notification
+    goto :bypass_check
 
     :goto_1
     return-object v0
@@ -4524,7 +4637,8 @@
     const/4 v0, 0x1
 
     :goto_2
-    if-eqz v0, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_3
     const-string/jumbo v0, ""
@@ -4563,7 +4677,8 @@
 
     aget-boolean v2, v2, v1
 
-    if-eqz v2, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x1
 
@@ -4593,25 +4708,29 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {p0}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {p1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {p2}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
     const/16 v1, 0x3e9
@@ -4789,7 +4908,8 @@
 
     invoke-direct {v2}, Ljava/lang/String;-><init>()V
 
-    if-eqz p0, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -4809,7 +4929,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4823,7 +4944,8 @@
 
     move-result v5
 
-    if-eqz v5, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "body"
 
@@ -4842,7 +4964,8 @@
 
     move-result v5
 
-    if-eqz v5, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "username"
 
@@ -4859,13 +4982,15 @@
 
     move-result v5
 
-    if-nez v5, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
-    if-eqz v5, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4873,7 +4998,8 @@
 
     instance-of v5, v5, Ljava/lang/String;
 
-    if-eqz v5, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4938,13 +5064,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Landroid/support/v4/a/d;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Landroid/support/v4/a/d;->d()Ljava/lang/String;
 
@@ -5007,7 +5135,8 @@
 
     const-string/jumbo v1, ""
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v3, ""
 
@@ -5018,7 +5147,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :goto_0
     monitor-exit v2
@@ -5083,7 +5213,8 @@
 .method public static d(Landroid/content/Context;I)V
     .locals 5
 
-    if-eqz p0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "PN_stackID_"
 
@@ -5206,11 +5337,13 @@
 
     const/4 v1, 0x1
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
 
     sget-object v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v1, "android.intent.action.MAIN"
 
@@ -5222,7 +5355,8 @@
 
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
+    const/4 v0, 0x0
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
 
     invoke-static {p1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->h(Landroid/content/Intent;)V
 
@@ -5280,7 +5414,8 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -5312,7 +5447,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5324,12 +5460,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x1
 
     :goto_1
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -5346,7 +5484,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5417,7 +5556,8 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, -0x1
 
@@ -5433,7 +5573,8 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     :try_start_1
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -5481,7 +5622,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v1, 0x7d1
 
@@ -5504,7 +5646,8 @@
 
     move-result v4
 
-    if-nez v4, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5650,7 +5793,8 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
     return-object v0
@@ -5671,7 +5815,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -5713,7 +5858,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     :goto_0
     return v0
@@ -5853,7 +5999,8 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v2, "1"
 
@@ -5861,14 +6008,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 p0, 0x0
 
     :cond_0
     invoke-static {v0, p0}, Landroid/support/v4/a/d;->a(Landroid/content/Context;Z)V
 
-    if-nez p0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x1
 
@@ -5887,7 +6036,8 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     move v0, v1
 
@@ -5904,7 +6054,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5916,7 +6067,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x1
 
@@ -5935,13 +6087,15 @@
 
     const/4 v1, 0x0
 
-    if-eqz p0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    if-eqz v3, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {v3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -5956,7 +6110,8 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -5971,7 +6126,8 @@
 
     and-int/2addr v0, v4
 
-    if-nez v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "pn_goto_multiplayer"
 
@@ -5979,6 +6135,7 @@
 
     move-result v0
 
+    const/4 v0, 0x0
     sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
 
     new-instance v0, Landroid/os/Bundle;
@@ -5993,7 +6150,8 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v4, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jv:Landroid/os/Bundle;
 
@@ -6010,7 +6168,8 @@
 
     move-result v4
 
-    if-nez v4, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -6032,7 +6191,8 @@
 
     sget-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
 
-    if-eqz v0, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     move v0, v2
 
@@ -6045,7 +6205,8 @@
 
     sget-boolean v5, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
 
-    if-eqz v5, :cond_6
+    # patched: always allow notification
+    goto :bypass_check
 
     :goto_3
     invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -6070,7 +6231,8 @@
 
     move-result v4
 
-    if-nez v4, :cond_7
+    # patched: always allow notification
+    goto :bypass_check
 
     :try_start_1
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -6101,7 +6263,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {}, Ljavax/microedition/midlet/d;->OD()V
 
@@ -6191,13 +6354,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "PN_LID_"
 
@@ -6205,7 +6370,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/d;->al(Ljava/lang/String;)V
 
@@ -6229,7 +6395,8 @@
 
     aget v0, v0, v5
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jD:[I
 
@@ -6304,10 +6471,12 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     move v0, v1
 
@@ -6330,7 +6499,8 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -6350,7 +6520,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -6362,7 +6533,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x1
 
@@ -6418,7 +6590,8 @@
 
     sget-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jB:Z
 
-    if-eqz v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const/16 v0, 0x3e8
 
@@ -6436,7 +6609,8 @@
 
     aget v0, v0, v4
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jD:[I
 
@@ -6477,19 +6651,22 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {p1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-nez v3, :cond_4
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-static {v0}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    # patched: always allow notification
+    goto :bypass_check
 
     const/4 v0, 0x6
 
@@ -6499,7 +6676,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    # patched: always allow notification
+    goto :bypass_check
 
     sget-object v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jw:Ljava/lang/ref/WeakReference;
 
@@ -6595,7 +6773,8 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
     return-object v0
@@ -6616,7 +6795,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -6653,7 +6833,8 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     :cond_0
     return-object v0
@@ -6674,7 +6855,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -6690,7 +6872,8 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    if-eqz p2, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -6702,7 +6885,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    # patched: always allow notification
+    goto :bypass_check
 
     const-string/jumbo v0, "pn_rqstType"
 
@@ -6732,7 +6916,8 @@
     :pswitch_1
     sget-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jy:Z
 
-    if-eqz v0, :cond_1
+    # patched: always allow notification
+    goto :bypass_check
 
     new-instance v0, Lcom/gameloft/android/GloftKLMF/PushNotification/o;
 
