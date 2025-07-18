@@ -611,9 +611,7 @@
 
     const-string/jumbo v6, ""
 
-    invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1012,9 +1010,7 @@
 
     const-string/jumbo v1, "body"
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     move-object v3, v1
 
@@ -1031,9 +1027,7 @@
 
     const-string/jumbo v1, "username"
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     move-object v4, v1
 
@@ -1046,9 +1040,7 @@
 
     if-nez v8, :cond_11
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-eqz v8, :cond_11
 
@@ -1076,9 +1068,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->aq(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1181,9 +1171,7 @@
 
     const-string/jumbo v1, "infopush"
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     move-object v5, v1
 
@@ -1224,9 +1212,7 @@
 
     const-string/jumbo v1, "per_of_day"
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     :goto_6
     move-object v2, v1
@@ -1252,9 +1238,7 @@
 
     move-result-object v1
 
-    invoke-interface {v9, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v1, :cond_6
 
@@ -1305,9 +1289,7 @@
 
     const-string/jumbo v1, "type"
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -1396,17 +1378,13 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {v9, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     const-string/jumbo v2, "RandomUserToken"
 
     const/4 v5, 0x0
 
-    invoke-interface {v9, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v5}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -2210,12 +2188,7 @@
 
     const-string/jumbo v3, "id"
 
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_2
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     :goto_3
     :try_start_3
@@ -2274,12 +2247,7 @@
 
     const-string/jumbo v1, "id"
 
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_6
-    .catch Lorg/json/JSONException; {:try_start_6 .. :try_end_6} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     goto :goto_3
 
@@ -2531,9 +2499,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p3, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v1, :cond_0
 
@@ -2912,9 +2878,7 @@
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v6}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -3002,9 +2966,7 @@
 
     const/4 v4, 0x1
 
-    invoke-interface {v7, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v3, :cond_2
 
@@ -3060,9 +3022,7 @@
 
     const-string/jumbo v11, ""
 
-    invoke-interface {v7, v10, v11}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     aput-object v10, v5, v4
 
@@ -3376,9 +3336,7 @@
 
     const/4 v6, 0x0
 
-    invoke-interface {v7, v2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     move-object v13, v3
 
@@ -3771,9 +3729,7 @@
 
     const/4 v5, 0x0
 
-    invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4222,9 +4178,7 @@
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v4}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->aq(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4386,9 +4340,7 @@
 
     const-string/jumbo v3, ""
 
-    invoke-interface {v2, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -4483,9 +4435,7 @@
 
     const/high16 v4, -0x80000000
 
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v0}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->o(Landroid/content/Context;)I
 
@@ -4827,9 +4777,7 @@
 
     const-string/jumbo v0, "body"
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     move-object v1, v0
 
@@ -4846,9 +4794,7 @@
 
     const-string/jumbo v0, "username"
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     move-object v2, v0
 
@@ -4875,9 +4821,7 @@
 
     if-eqz v5, :cond_3
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-virtual {v3, v0, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -5407,9 +5351,7 @@
 
     const-string/jumbo v2, "pn_group_ID"
 
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v1}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
     :try_end_0
@@ -5630,9 +5572,7 @@
 
     move-result-object v2
 
-    invoke-interface {v2, v1, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v1, :cond_1
 
@@ -5959,9 +5899,7 @@
 
     const-string/jumbo v0, "pn_goto_multiplayer"
 
-    invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
 
@@ -5986,9 +5924,7 @@
     :cond_1
     const-string/jumbo v0, "pn_online"
 
-    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v0}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -6046,9 +5982,7 @@
 
     const-string/jumbo v2, "pn_group_ID"
 
-    invoke-virtual {v3, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v2}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -6081,9 +6015,7 @@
     :cond_2
     const-string/jumbo v0, "START_FROM_PUSH"
 
-    invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-eqz v0, :cond_3
 
@@ -6167,9 +6099,7 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     invoke-static {v0}, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->ap(Ljava/lang/String;)Z
 
@@ -6284,9 +6214,7 @@
 
     const-string/jumbo v3, "PN_Category"
 
-    invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v2, :cond_1
 
@@ -6575,9 +6503,7 @@
 
     const-string/jumbo v2, "UserID"
 
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v1, :cond_1
 
@@ -6633,9 +6559,7 @@
 
     const-string/jumbo v2, "PN_GroupId"
 
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v0, 0x0  # safe-patched: bypass preference check
 
     if-nez v1, :cond_1
 
