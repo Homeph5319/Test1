@@ -5083,91 +5083,61 @@
 .method public static d(Landroid/content/Context;I)V
     .locals 5
 
+    # patched: removed SharedPreferences.contains() blocking logic
+
     if-eqz p0, :cond_1
 
     const-string/jumbo v0, "PN_stackID_"
-
     add-int/lit8 v1, p1, 0x20
-
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
     move-result-object v1
-
     invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
     move-result-object v0
 
     invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
     move-result-object v1
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
     move-result-object v1
 
     const/4 v2, 0x1
-
     invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
     move-result-object v0
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
     move-result-object v1
 
     const/4 v0, 0x0
-
     :goto_0
     const/16 v2, 0x21
-
     if-ge v0, v2, :cond_0
 
     const-string/jumbo v2, "PN_stackMSG_"
-
     add-int/lit8 v3, p1, 0x20
-
     invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
     move-result-object v3
-
     invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
     move-result-object v2
 
     new-instance v3, Ljava/lang/StringBuilder;
-
     const-string/jumbo v4, "_"
-
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     add-int/lit8 v4, v0, 0x1
-
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
     move-result-object v4
-
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     move-result-object v3
-
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const/4 v4, 0x0
+    invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     add-int/lit8 v0, v0, 0x1
-
     goto :goto_0
 
     :cond_0
