@@ -1494,15 +1494,29 @@
 
     invoke-super {p0, p1}, Ljavax/microedition/midlet/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    # Clear GLPN SharedPreferences safely
+    # Selectively remove GLPN keys related to local push
     const-string v0, "GLPN"
     const/4 v1, 0x0
     invoke-virtual {p0, v0, v1}, Lcom/gameloft/android/GloftKLMF/Start;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
     move-result-object v0
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
     move-result-object v1
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
-    move-result-object v1
+    const-string v2, "pn_count_push_local"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "pn_time_first_push_local"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "PN_LID_0"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "PN_LID_1"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "PN_LID_2"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "PN_LID_3"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "PN_LID_4"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "LocalPNType_101"
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     sput-object p0, Lcom/gameloft/android/GloftKLMF/Start;->abV:Lcom/gameloft/android/GloftKLMF/Start;
