@@ -98,7 +98,9 @@
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jl:Ljava/lang/String;
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jn:Ljava/lang/String;
 

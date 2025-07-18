@@ -64,6 +64,14 @@
 
     invoke-virtual {v0, v2}, Landroid/support/v4/a/bl;->f(Z)Landroid/support/v4/a/bl;
 
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/a/bl;->a(I)Landroid/support/v4/a/bl;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/a/bl;->b(I)Landroid/support/v4/a/bl;
+
     iget-object v0, p0, Lcom/gameloft/android/GloftKLMF/PushNotification/f;->context:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/support/v4/a/d;->b(Landroid/content/Context;)Z
