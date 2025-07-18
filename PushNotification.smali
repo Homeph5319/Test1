@@ -76,7 +76,12 @@
 
     const/4 v4, 0x2
 
-    const/4 v5, 0x7
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result-wide v4
+
+    const-wide/16 v6, 0x2710  # 10000
+    rem-long/2addr v4, v6
+    long-to-int v5, v4
 
     const/4 v0, 0x1
 
