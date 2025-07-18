@@ -3248,7 +3248,12 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
-    invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    
+    # --- NotificationChannel patch start ---
+# (Smali logic inserted here during actual file patching)
+    # --- NotificationChannel patch end ---
+
+invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
