@@ -84,12 +84,7 @@
 
     const/4 v1, 0x0
 
-    const/4 v0, 0x1
-    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
-    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jk:Z
-    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jl:Z
-    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jo:Z
-    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jn:Z
+    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
 
     sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
 
@@ -103,8 +98,7 @@
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jl:Ljava/lang/String;
 
-    const/4 v0, 0x1
-    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
+    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jn:Ljava/lang/String;
 
