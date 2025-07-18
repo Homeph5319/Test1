@@ -84,7 +84,12 @@
 
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jg:Z
+    const/4 v0, 0x1
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jk:Z
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jl:Z
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jo:Z
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jn:Z
 
     sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jh:Z
 
@@ -98,7 +103,8 @@
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jl:Ljava/lang/String;
 
-    sput-boolean v1, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
+    const/4 v0, 0x1
+    sput-boolean v0, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jm:Z
 
     sput-object v3, Lcom/gameloft/android/GloftKLMF/PushNotification/PushNotification;->jn:Ljava/lang/String;
 
@@ -3247,24 +3253,6 @@
     move-result-object v2
 
     check-cast v2, Landroid/app/NotificationManager;
-
-    
-    # --- Begin Fixed NotificationChannel Patch ---
-    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
-    const/16 v7, 0x1a
-    if-lt v6, v7, :skip_patch_notification_channel
-
-    const-string v8, "default_channel_id"
-    const-string v9, "Game Notification"
-    const/4 v10, 4
-
-    new-instance v11, Landroid/app/NotificationChannel;
-    invoke-direct {v11, v8, v9, v10}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
-
-    invoke-virtual {v2, v11}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
-
-  :skip_patch_notification_channel
-    # --- End NotificationChannel Patch ---
 
     invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
