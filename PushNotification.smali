@@ -3249,18 +3249,19 @@
     check-cast v2, Landroid/app/NotificationManager;
 
     
-    # --- Begin NotificationChannel Patch ---
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-    const/16 v4, 0x1a
-    if-lt v3, v4, :skip_patch_notification_channel
+    # --- Begin Fixed NotificationChannel Patch ---
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/16 v7, 0x1a
+    if-lt v6, v7, :skip_patch_notification_channel
 
-    new-instance v5, Landroid/app/NotificationChannel;
-    const-string v3, "default_channel_id"
-    const-string v4, "Game Notification"
-    const/4 v5, 4
-    new-instance v3, Landroid/app/NotificationChannel;
-    invoke-direct {v3, v3, v4, v5}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
-    invoke-virtual {v2, v3}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
+    const-string v8, "default_channel_id"
+    const-string v9, "Game Notification"
+    const/4 v10, 4
+
+    new-instance v11, Landroid/app/NotificationChannel;
+    invoke-direct {v11, v8, v9, v10}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+
+    invoke-virtual {v2, v11}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
   :skip_patch_notification_channel
     # --- End NotificationChannel Patch ---
