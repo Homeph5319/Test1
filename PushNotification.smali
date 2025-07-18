@@ -76,12 +76,7 @@
 
     const/4 v4, 0x2
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-    move-result-wide v4
-
-    const-wide/16 v6, 0x2710  # 10000
-    rem-long/2addr v4, v6
-    long-to-int v5, v4
+    const/4 v5, 0x7
 
     const/4 v0, 0x1
 
@@ -3253,6 +3248,23 @@
 
     check-cast v2, Landroid/app/NotificationManager;
 
+    
+    # --- Begin NotificationChannel Patch ---
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/16 v4, 0x1a
+    if-lt v3, v4, :skip_patch_notification_channel
+
+    new-instance v5, Landroid/app/NotificationChannel;
+    const-string v3, "default_channel_id"
+    const-string v4, "Game Notification"
+    const/4 v5, 4
+    new-instance v3, Landroid/app/NotificationChannel;
+    invoke-direct {v3, v3, v4, v5}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+    invoke-virtual {v2, v3}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
+
+  :skip_patch_notification_channel
+    # --- End NotificationChannel Patch ---
+
     invoke-virtual {v2, v5, v3}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     invoke-interface {v7}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -5088,61 +5100,91 @@
 .method public static d(Landroid/content/Context;I)V
     .locals 5
 
-    # patched: removed SharedPreferences.contains() blocking logic
-
     if-eqz p0, :cond_1
 
     const-string/jumbo v0, "PN_stackID_"
+
     add-int/lit8 v1, p1, 0x20
+
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
     move-result-object v1
+
     invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v0
 
     invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
     move-result-object v1
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
     move-result-object v1
 
     const/4 v2, 0x1
+
     invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
     move-result-object v0
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
     move-result-object v1
 
     const/4 v0, 0x0
+
     :goto_0
     const/16 v2, 0x21
+
     if-ge v0, v2, :cond_0
 
     const-string/jumbo v2, "PN_stackMSG_"
+
     add-int/lit8 v3, p1, 0x20
+
     invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
     move-result-object v3
+
     invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
     move-result-object v2
 
     new-instance v3, Ljava/lang/StringBuilder;
+
     const-string/jumbo v4, "_"
+
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     add-int/lit8 v4, v0, 0x1
+
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
     move-result-object v4
+
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    move-result-object v3
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v3
 
-    const/4 v4, 0x0
-    invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     add-int/lit8 v0, v0, 0x1
+
     goto :goto_0
 
     :cond_0
