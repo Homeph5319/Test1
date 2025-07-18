@@ -5097,25 +5097,13 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
     move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    invoke-static {p0}, Landroid/support/v4/a/d;->c(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
     move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
@@ -5164,15 +5152,11 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
     :cond_1
     return-void
 .end method
