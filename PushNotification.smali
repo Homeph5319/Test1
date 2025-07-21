@@ -3222,6 +3222,16 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    # Reset pn_count_push_local to avoid cap
+    invoke-static {p0}, Landroid/support/v4/a/a;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    move-result-object v0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object v1
+    const-string/jumbo v2, "pn_count_push_local"
+    const/4 v3, 0x0
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
     return-void
 
     :cond_9
